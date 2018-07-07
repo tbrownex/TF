@@ -32,4 +32,3 @@ def splitY(train, val, test):
         data_dict['test_labels']   = (LABELS == test_y[:,   None]).astype(np.float32)
     
     return data_dict
-
