@@ -18,6 +18,7 @@ from convertOrdinals import convertOrdinals
 #from genFeatures import genFeatures
 
 def removeCols(df):
+    ''' if any column is constant (same value for all rows) remove it '''
     cols   = df.columns
     remove = analyzeCols(df)
     keep = [col for col in cols if col not in remove]

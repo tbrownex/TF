@@ -3,6 +3,7 @@ import numpy  as np
 import os
 import sys
 import time
+from pathlib import Path
 
 from getArgs       import getArgs
 from getConfig     import getConfig
@@ -28,7 +29,8 @@ def loadParms(x):
 # of runs later
 def writeResults(results):
     delim = ","
-    with open("/home/tbrownex/NNscores.csv", 'w') as summary:
+    home = str(Path.home())
+    with open(home+"/NNscores.csv", 'w') as summary:
         hdr = "L1"+delim+"activation"+delim+"batchSize"+delim+"LR"+\
         delim+"StdDev"+delim+"Dropout"+delim+"optimizer"+delim+"MAPE"+delim+"RMSE"+"\n"
         summary.write(hdr)
