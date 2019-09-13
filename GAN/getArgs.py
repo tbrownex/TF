@@ -16,7 +16,6 @@ def getArgs():
     '''parser.add_argument("genFeatures", \
                         choices=['Y','N'], \
                         help="Generate additional features or not")'''
-    parser.add_argument("-O", "--Outliers", \
-                        choices=['Y','N'], \
-                        help="Remove outliers or not; Y to remove")
+    parser.add_argument('epochStart',  type=int, 
+                    help='starting Epoch number')
     return parser.parse_args()
