@@ -101,4 +101,3 @@ if __name__ == "__main__":
         for k,v in scores.items():
             rec = str(k) +"|"+ str(v['topK']) +"|"+ str(v['lift']) +"\n"
             results.write(rec)
-   
